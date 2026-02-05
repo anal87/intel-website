@@ -1,0 +1,14 @@
+node_modules/
+.env
+*.log
+dist/
+build/
+.DS_Store
+*.mp4
+*.mov
+*.avi
+*.zip
+*.tar
+*.gz
+*.ps1
+backup_html/
