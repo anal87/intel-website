@@ -1,9 +1,23 @@
 ﻿{
   "name": "intel-website",
   "version": "1.0.0",
+  "description": "Intel Corporation Official Website",
+  "main": "index.js",
   "scripts": {
     "dev": "npx serve public -p 8080",
+    "start": "npm run dev",
     "deploy": "firebase deploy --only hosting",
-    "build": "echo 'No build required for static site'"
+    "build": "echo 'Static site - no build step required'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": ["intel", "website", "firebase", "hosting"],
+  "author": "Intel Corporation",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
