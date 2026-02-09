@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intel Website - Test Page</title>
+    <meta name="description" content="Test page for Intel website deployment">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .success {
+            color: #28a745;
+            background: #d4edda;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .info {
+            color: #17a2b8;
+            background: #d1ecf1;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Intel Website Test Page</h1>
+    
+    <div class="success">
+        ✅ Website is correctly deployed and accessible!
+    </div>
+    
+    <h2>Deployment Information</h2>
+    <table>
+        <tr>
+            <th>Property</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Hosting Provider</td>
+            <td>Firebase Hosting</td>
+        </tr>
+        <tr>
+            <td>Project ID</td>
+            <td>web-projects-486505</td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>https://web-projects-486505.web.app</td>
+        </tr>
+        <tr>
+            <td>Generated</td>
+            <td>Mon Feb  9 03:01:24 PM UTC 2026</td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td>Live ✅</td>
+        </tr>
+    </table>
+    
+    <div class="info">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="/">Home Page</a></li>
+            <li><a href="https://console.firebase.google.com/project/web-projects-486505/overview">Firebase Console</a></li>
+            <li><a href="https://github.com">GitHub Repository</a></li>
+        </ul>
+    </div>
+    
+    <h2>Health Check</h2>
+    <button onclick="checkHealth()">Run Health Check</button>
+    <div id="health-result"></div>
+    
+    <script>
+        async function checkHealth() {
+            const resultDiv = document.getElementById('health-result');
+            resultDiv.innerHTML = '<p>Checking site health...</p>';
+            
+            try {
+                const start = performance.now();
+                const response = await fetch('/');
+                const end = performance.now();
+                
+                const responseTime = Math.round(end - start);
+                
+                resultDiv.innerHTML = `
+                    <div class="success">
+                        <h4>✅ Site is Healthy</h4>
+                        <p>Status: ${response.status} ${response.statusText}</p>
+                        <p>Response Time: ${responseTime}ms</p>
+                        <p>Server: ${response.headers.get('server') || 'Firebase Hosting'}</p>
+                    </div>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="error">
+                        <h4>❌ Health Check Failed</h4>
+                        <p>Error: ${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

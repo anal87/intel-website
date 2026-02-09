@@ -1,0 +1,28 @@
+{
+  "site": {
+    "name": "Intel Website",
+    "url": "https://web-projects-486505.web.app",
+    "description": "Intel Corporation Official Website",
+    "version": "1.0.0",
+    "last_deployed": "2026-02-09T15:05:11+00:00",
+    "owner": "Intel Corporation",
+    "contact": {
+      "email": "webmaster@intel.com",
+      "phone": "+1-408-765-8080"
+    }
+  },
+  "hosting": {
+    "provider": "Firebase",
+    "project_id": "web-projects-486505",
+    "region": "us-central",
+    "features": ["https", "cdn", "ssl", "global_edge"]
+  },
+  "optimization": {
+    "compression": true,
+    "minification": true,
+    "caching": {
+      "static_assets": "1 year",
+      "html": "5 minutes"
+    }
+  }
+}
