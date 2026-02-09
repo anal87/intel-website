@@ -1,0 +1,36 @@
+[debug] [2026-02-09T16:15:16.476Z] ----------------------------------------------------------------------
+[debug] [2026-02-09T16:15:16.477Z] Command:       /nix/store/ws50yvm6vzlzf7jzz6n7xh4szddrack1-nodejs-20.19.1/bin/node /nix/store/c776mhyhgykcld7p90ajrka149ifn61a-firebase-tools-14.26.0/lib/node_modules/firebase-tools/lib/bin/firebase.js login:ci
+[debug] [2026-02-09T16:15:16.478Z] CLI Version:   14.26.0
+[debug] [2026-02-09T16:15:16.478Z] Platform:      linux
+[debug] [2026-02-09T16:15:16.478Z] Node Version:  v20.19.1
+[debug] [2026-02-09T16:15:16.478Z] Time:          Mon Feb 09 2026 16:15:16 GMT+0000 (Coordinated Universal Time)
+[debug] [2026-02-09T16:15:16.478Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-09T16:15:16.686Z] Checked if tokens are valid: true, expires at: 1770655774170
+[debug] [2026-02-09T16:15:16.686Z] Checked if tokens are valid: true, expires at: 1770655774170
+[debug] [2026-02-09T16:15:16.689Z] >>> [apiv2][query] GET https://monospace-pa.googleapis.com/v1/workspaces/intel-websitegit-81178698 [none]
+[debug] [2026-02-09T16:15:17.713Z] <<< [apiv2][status] GET https://monospace-pa.googleapis.com/v1/workspaces/intel-websitegit-81178698 200
+[debug] [2026-02-09T16:15:17.713Z] <<< [apiv2][body] GET https://monospace-pa.googleapis.com/v1/workspaces/intel-websitegit-81178698 {"workspaceId":"intel-websitegit-81178698","name":"intel-website.git","workspaceRedirectUrl":"firebase-intel-websitegit-1770640529216.cluster-ancjwrkgr5dvux4qug5rbzyc2y.cloudworkstations.dev","status":"WORKSPACE_STATUS_RUNNING","lastAccessDatetime":"2026-02-09T15:52:35.905122Z","workspaceTemplate":"WORKSPACE_TEMPLATE_FLUTTER","owner":"SELF","serviceAccountEmail":"msp-2645490692278173057@monospace-per-ws-sa-7.iam.gserviceaccount.com","gitRepoUrl":"https://github.com/anal87/intel-website.git","enableNix":true,"ownerEmail":"samarhussainsyed@hotmail.com","workstationAccessToken":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkLmdvb2dsZS5jb20vd29ya3N0YXRpb25zIiwiYXVkIjoiZmlyZWJhc2UtaW50ZWwtd2Vic2l0ZWdpdC0xNzcwNjQwNTI5MjE2LmNsdXN0ZXItYW5jandya2dyNWR2dXg0cXVnNXJienljMnkuY2xvdWR3b3Jrc3RhdGlvbnMuZGV2IiwiaWF0IjoxNzcwNjUzNzE3LCJleHAiOjE3NzA3NDAxMTd9.igxArOloX84N-lJijOGo2ciMTQd1v6XqdqGut2nwEmGImQQmb7Mq_35vL3wiQJ42yojHEUlV3Li9lTh9iNhcQMmzz-fpgztRAH1szcYYgOqQ-yaOV30l_OSNsX9ljXEjjz104G9wJtdOnvt0NyLGaKvMq2qzFBZ4tHyTHEyu7cbHgRoA9V-lHk-rWSrypqX88V9pGyFrmrWkxTjal1De5PZiB8HQLoR3CT3cqhyzkeZ8kxJg11rqJmJsZkfKyXYbQvfruHNz2gRIGr6Frwz5f-aDrY8GbZx3ECwGi0S2LKFbzmJGVsnMk84TvVhyJgOa1fh5vfQXZ8gVIstq1rdpYw","firebaseProjectId":"intel-websitegit-8117869-8b086"}
+[warn] ⚠  Authenticating with a `login:ci` token is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=633823256&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2026-02-09T16:15:21.813Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2026-02-09T16:15:21.813Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"27e0ad5d-c99f-4dda-aa4c-ac68396db0f6"}
+[debug] [2026-02-09T16:15:22.116Z] <<< [apiv2][status] POST https://auth.firebase.tools/attest 200
+[debug] [2026-02-09T16:15:22.116Z] <<< [apiv2][body] POST https://auth.firebase.tools/attest {"token":"t7Us5TRJL-i45WdEyUEMYOFUBCcNgL3b8SeGDpHJBF0"}
+[info] 
+[info] To sign in to the Firebase CLI:
+[info] 
+[info] 1. Take note of your session ID:
+[info] 
+[info]    27E0A
+[info] 
+[info] 2. Visit the URL below on any device and follow the instructions to get your code:
+[info] 
+[info]    https://auth.firebase.tools/login?code_challenge=D4VFZWS0Pq4db3hAj5nPW3eydzL6ooaF2d7f2bUbxkM&session=27e0ad5d-c99f-4dda-aa4c-ac68396db0f6&attest=t7Us5TRJL-i45WdEyUEMYOFUBCcNgL3b8SeGDpHJBF0
+[info] 
+[info] 3. Paste or enter the authorization code below once you have it:
+[info] 
