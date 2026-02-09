@@ -1,0 +1,9 @@
+﻿{
+  "name": "intel-website",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx serve public -p 8080",
+    "deploy": "firebase deploy --only hosting",
+    "build": "echo 'No build required for static site'"
+  }
+}
