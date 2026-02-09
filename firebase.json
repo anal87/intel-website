@@ -6,15 +6,16 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ],
-    "cleanUrls": true,
-    "trailingSlash": false,
     "headers": [
+      {
+        "source": "**/*.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
       {
         "source": "**",
         "headers": [
@@ -23,6 +24,12 @@
             "value": "public, max-age=3600"
           }
         ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   }

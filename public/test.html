@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+    <h1>JavaScript Test Page</h1>
+    <p>If you see a timestamp below, JavaScript is working:</p>
+    <div style="background:yellow;padding:20px;font-size:24px;">
+        <span id="testTime">Waiting for JavaScript...</span>
+    </div>
+    
+    <script>
+        document.getElementById('testTime').textContent = 
+            'JavaScript IS WORKING! Time: ' + new Date().toLocaleTimeString();
+    </script>
+</body>
+</html>
