@@ -25,67 +25,70 @@
             color: #333;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
         
         .header {
             background: linear-gradient(135deg, var(--intel-dark) 0%, var(--intel-blue) 100%);
             color: white;
-            padding: 2rem;
+            padding: 3rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
-        .header h1 {
-            font-size: 2.8rem;
+        .logo {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        h1 {
+            font-size: 3rem;
             margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-        
-        .header .logo {
-            font-size: 2.5rem;
-            color: #4CAF50;
         }
         
         .tagline {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             opacity: 0.9;
             max-width: 600px;
             margin: 0 auto;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 20px;
+        .content {
+            padding: 3rem 2rem;
         }
         
         .dashboard {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
         
         .card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 2rem;
+            border-left: 5px solid var(--intel-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
         .card h3 {
             color: var(--intel-dark);
             margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--intel-light);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -95,38 +98,22 @@
             color: var(--intel-blue);
         }
         
-        .status-badge {
+        .status {
             display: inline-block;
-            padding: 6px 12px;
+            padding: 8px 16px;
             background: #4CAF50;
             color: white;
             border-radius: 20px;
-            font-size: 0.9rem;
             font-weight: bold;
             margin-bottom: 1rem;
         }
         
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 1rem;
-        }
-        
-        .tech-item {
+        .deployment-info {
             background: var(--intel-light);
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: var(--intel-dark);
-        }
-        
-        .deploy-info {
-            background: var(--intel-light);
-            border-left: 4px solid var(--intel-blue);
-            padding: 1rem;
-            margin: 1.5rem 0;
-            border-radius: 0 8px 8px 0;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 2px solid var(--intel-blue);
         }
         
         .buttons {
@@ -141,14 +128,11 @@
             background: var(--intel-blue);
             color: white;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
             display: inline-flex;
             align-items: center;
             gap: 8px;
             transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
         }
         
         .btn:hover {
@@ -156,44 +140,16 @@
             transform: scale(1.05);
         }
         
-        .btn-secondary {
-            background: #6c757d;
-        }
-        
-        .btn-success {
-            background: #28a745;
-        }
-        
         .footer {
             text-align: center;
             padding: 2rem;
-            margin-top: 3rem;
             background: var(--intel-dark);
             color: white;
-            border-top: 4px solid var(--intel-blue);
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .footer a {
-            color: #e6f2ff;
-            text-decoration: none;
-        }
-        
-        .footer a:hover {
-            text-decoration: underline;
         }
         
         @media (max-width: 768px) {
-            .header h1 {
+            h1 {
                 font-size: 2rem;
-                flex-direction: column;
             }
             
             .dashboard {
@@ -207,158 +163,135 @@
     </style>
 </head>
 <body>
-    <header class="header">
-        <h1>
-            <i class="fas fa-microchip logo"></i>
-            Intel Corporation
-        </h1>
-        <p class="tagline">World leader in computing innovation, semiconductor manufacturing, and technology solutions</p>
-    </header>
-
     <div class="container">
-        <div class="dashboard">
-            <div class="card">
-                <h3><i class="fas fa-rocket"></i> Deployment Status</h3>
-                <div class="status-badge">
-                    <i class="fas fa-check-circle"></i> LIVE
+        <header class="header">
+            <i class="fas fa-microchip logo"></i>
+            <h1>Intel Corporation</h1>
+            <p class="tagline">World leader in computing innovation</p>
+        </header>
+        
+        <div class="content">
+            <div class="dashboard">
+                <div class="card">
+                    <h3><i class="fas fa-rocket"></i> Deployment Status</h3>
+                    <div class="status">
+                        <i class="fas fa-check-circle"></i> LIVE & RUNNING
+                    </div>
+                    <p><strong>Project ID:</strong> web-projects-486505</p>
+                    <p><strong>Hosting Provider:</strong> Firebase Hosting</p>
+                    <p><strong>CI/CD Pipeline:</strong> GitHub Actions</p>
+                    <p><strong>Last Deployed:</strong> <span id="deploymentTime">Loading...</span></p>
                 </div>
-                <p><strong>Project ID:</strong> web-projects-486505</p>
-                <p><strong>Hosting:</strong> Firebase Hosting</p>
-                <p><strong>CI/CD:</strong> GitHub Actions</p>
-                <p><strong>Last Deployed:</strong> <span id="deployment-time">Just now</span></p>
+                
+                <div class="card">
+                    <h3><i class="fas fa-cogs"></i> Technology Stack</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li>✅ Firebase Hosting (Global CDN)</li>
+                        <li>✅ GitHub Actions (CI/CD)</li>
+                        <li>✅ HTML5 & CSS3</li>
+                        <li>✅ JavaScript ES6+</li>
+                        <li>✅ Automated SSL/TLS</li>
+                        <li>✅ Real-time Deployment</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-chart-line"></i> Performance</h3>
+                    <p><i class="fas fa-bolt" style="color: #4CAF50;"></i> Global Content Delivery Network</p>
+                    <p><i class="fas fa-shield-alt" style="color: #0071c5;"></i> Enterprise-grade Security</p>
+                    <p><i class="fas fa-sync-alt" style="color: #ff9800;"></i> Auto-scaling Infrastructure</p>
+                    <p><i class="fas fa-tachometer-alt" style="color: #9c27b0;"></i> 99.9% Uptime Guarantee</p>
+                </div>
             </div>
             
-            <div class="card">
-                <h3><i class="fas fa-cogs"></i> Technology Stack</h3>
-                <div class="tech-stack">
-                    <span class="tech-item">Firebase Hosting</span>
-                    <span class="tech-item">GitHub Actions</span>
-                    <span class="tech-item">HTML5</span>
-                    <span class="tech-item">CSS3</span>
-                    <span class="tech-item">JavaScript</span>
-                    <span class="tech-item">Global CDN</span>
-                    <span class="tech-item">Auto SSL</span>
-                    <span class="tech-item">CI/CD Pipeline</span>
-                </div>
+            <div class="deployment-info">
+                <h3><i class="fas fa-info-circle"></i> Deployment Information</h3>
+                <p>This Intel Corporation website is deployed using a modern, automated CI/CD pipeline powered by Firebase Hosting and GitHub Actions.</p>
+                <p><strong>Deployment Method:</strong> Automated on every Git push</p>
+                <p><strong>Infrastructure:</strong> Google Cloud Platform Global CDN</p>
+                <p><strong>Status:</strong> <span style="color: #4CAF50; font-weight: bold;">ACTIVE & MONITORED</span></p>
             </div>
             
-            <div class="card">
-                <h3><i class="fas fa-chart-line"></i> Performance</h3>
-                <p><i class="fas fa-bolt" style="color: #4CAF50;"></i> Global CDN Delivery</p>
-                <p><i class="fas fa-shield-alt" style="color: #0071c5;"></i> Automatic SSL/TLS</p>
-                <p><i class="fas fa-sync-alt" style="color: #ff9800;"></i> Auto-scaling Infrastructure</p>
-                <p><i class="fas fa-tachometer-alt" style="color: #9c27b0;"></i> 99.9% Uptime SLA</p>
+            <div class="buttons">
+                <a href="https://console.firebase.google.com/project/web-projects-486505/overview" class="btn" target="_blank">
+                    <i class="fas fa-fire"></i> Firebase Console
+                </a>
+                <a href="https://github.com/anal87/intel-website/actions" class="btn" target="_blank">
+                    <i class="fab fa-github"></i> GitHub Actions
+                </a>
+                <a href="https://github.com/anal87/intel-website" class="btn" target="_blank">
+                    <i class="fas fa-code"></i> Source Code
+                </a>
+                <a href="https://www.intel.com" class="btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Official Intel Site
+                </a>
             </div>
         </div>
-
-        <div class="deploy-info">
-            <h3><i class="fas fa-info-circle"></i> Deployment Information</h3>
-            <p>This website is automatically deployed using a modern CI/CD pipeline. Any changes pushed to the GitHub repository trigger an automated build and deployment process.</p>
-            <p><strong>Auto-deployment Status:</strong> <span style="color: #4CAF50; font-weight: bold;">ACTIVE ✓</span></p>
-        </div>
-
-        <div class="buttons">
-            <a href="https://console.firebase.google.com/project/web-projects-486505/overview" class="btn" target="_blank">
-                <i class="fas fa-fire"></i> Firebase Console
-            </a>
-            <a href="https://github.com/anal87/intel-website/actions" class="btn btn-secondary" target="_blank">
-                <i class="fab fa-github"></i> GitHub Actions
-            </a>
-            <a href="https://github.com/anal87/intel-website" class="btn btn-secondary" target="_blank">
-                <i class="fas fa-code"></i> Source Code
-            </a>
-            <button class="btn btn-success" onclick="testDeployment()">
-                <i class="fas fa-vial"></i> Test Deployment
-            </button>
-        </div>
+        
+        <footer class="footer">
+            <p>© 2026 Intel Corporation. All rights reserved.</p>
+            <p style="margin-top: 1rem; opacity: 0.8;">
+                This website demonstrates enterprise-grade deployment infrastructure.
+            </p>
+        </footer>
     </div>
 
-    <footer class="footer">
-        <p>© 2026 Intel Corporation. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="https://www.intel.com" target="_blank">Official Intel Website</a>
-            <a href="https://firebase.google.com" target="_blank">Firebase</a>
-            <a href="https://github.com" target="_blank">GitHub</a>
-            <a href="https://cloud.google.com" target="_blank">Google Cloud</a>
-        </div>
-        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-            This deployment platform demonstrates enterprise-grade web hosting with automated CI/CD pipelines.
-        </p>
-    </footer>
-
     <script>
-        // Update deployment time
-        const deploymentTime = document.getElementById('deployment-time');
-        const now = new Date();
-        deploymentTime.textContent = now.toLocaleString('en-US', {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            timeZoneName: 'short'
-        });
-
-        // Test deployment function
-        async function testDeployment() {
-            const testBtn = event.target.closest('.btn');
-            const originalText = testBtn.innerHTML;
-            
-            testBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Testing...';
-            testBtn.disabled = true;
-            
-            try {
-                const startTime = Date.now();
-                const response = await fetch('/');
-                const endTime = Date.now();
-                const responseTime = endTime - startTime;
-                
-                if (response.ok) {
-                    alert(`✅ Deployment test successful!\n\nStatus: ${response.status}\nResponse Time: ${responseTime}ms\nServer: ${response.headers.get('server') || 'Firebase Hosting'}`);
-                } else {
-                    alert(`⚠️ Site responded with status: ${response.status}`);
-                }
-            } catch (error) {
-                alert(`❌ Deployment test failed:\n${error.message}`);
-            } finally {
-                testBtn.innerHTML = originalText;
-                testBtn.disabled = false;
-            }
+        // Update deployment time with real timestamp
+        function updateDeploymentTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                timeZoneName: 'short'
+            };
+            document.getElementById('deploymentTime').textContent = now.toLocaleDateString('en-US', options);
         }
-
-        // Auto-refresh deployment status every 30 seconds
-        setInterval(() => {
-            fetch('/')
-                .then(response => {
-                    if (!response.ok) {
-                        console.warn('Site check failed:', response.status);
-                    }
-                })
-                .catch(error => {
-                    console.error('Site check error:', error);
-                });
-        }, 30000);
-
-        // Add animation to cards on load
-        document.addEventListener('DOMContentLoaded', () => {
+        
+        // Update on page load
+        updateDeploymentTime();
+        
+        // Auto-update every minute
+        setInterval(updateDeploymentTime, 60000);
+        
+        // Add animation
+        document.addEventListener('DOMContentLoaded', function() {
             const cards = document.querySelectorAll('.card');
             cards.forEach((card, index) => {
-                card.style.animation = `fadeIn 0.5s ease ${index * 0.1}s forwards`;
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+            
+            // Initial styles for animation
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             });
         });
-
-        // Add CSS animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(20px); }
-                to { opacity: 1; transform: translateY(0); }
+        
+        // Health check
+        async function checkSiteHealth() {
+            try {
+                const response = await fetch('/');
+                if (response.ok) {
+                    console.log('✅ Site health check passed');
+                }
+            } catch (error) {
+                console.log('⚠️ Site health check:', error.message);
             }
-        `;
-        document.head.appendChild(style);
+        }
+        
+        // Check every 30 seconds
+        setInterval(checkSiteHealth, 30000);
+        checkSiteHealth(); // Initial check
     </script>
 </body>
 </html>
-
