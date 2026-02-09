@@ -4,58 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intel Corporation - Official Website</title>
+    <meta name="description" content="Intel Corporation - World leader in computing innovation">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --intel-blue: #0071c5;
+            --intel-dark: #003366;
+            --intel-light: #e6f2ff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
+        }
+        
+        .navbar {
+            background: var(--intel-dark);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 20px;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
-        .container {
-            max-width: 800px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        
+        .logo i {
+            color: #4CAF50;
+            font-size: 1.8rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background: var(--intel-blue);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--intel-dark) 0%, var(--intel-blue) 100%);
+            color: white;
+            padding: 4rem 2rem;
             text-align: center;
         }
-        h1 {
+        
+        .hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 10px;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
+            margin-bottom: 1rem;
         }
-        .logo {
-            font-size: 2.5rem;
-            color: #4CAF50;
-        }
-        .tagline {
+        
+        .hero p {
             font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
             opacity: 0.9;
-            margin-bottom: 30px;
         }
+        
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
         .dashboard {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
+        
         .card {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 20px;
+            background: white;
             border-radius: 10px;
-            text-align: left;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
         }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h3 {
+            color: var(--intel-dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
         .status-badge {
             display: inline-block;
             background: #4CAF50;
@@ -63,79 +122,140 @@
             padding: 8px 16px;
             border-radius: 20px;
             font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
         }
-        .timestamp {
-            font-family: 'Courier New', monospace;
-            font-size: 1.1rem;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 15px;
+        
+        .deployment-info {
+            background: var(--intel-light);
+            padding: 2rem;
             border-radius: 10px;
-            margin: 20px 0;
+            margin: 2rem 0;
+            border-left: 4px solid var(--intel-blue);
         }
+        
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 10px;
+            margin-top: 1rem;
         }
+        
         .tech-tag {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 5px 10px;
-            border-radius: 15px;
+            background: var(--intel-light);
+            padding: 8px 15px;
+            border-radius: 20px;
             font-size: 0.9rem;
+            color: var(--intel-dark);
+        }
+        
+        .footer {
+            background: var(--intel-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+            
+            .nav-links a {
+                margin: 0;
+            }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>
-            <i class="fas fa-microchip logo"></i>
-            Intel Corporation
-        </h1>
-        <p class="tagline">World leader in computing innovation</p>
-        
-        <div class="status-badge">
-            <i class="fas fa-check-circle"></i> LIVE & RUNNING
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-microchip"></i>
+            <span>Intel Corporation</span>
         </div>
-        
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about/">About</a>
+            <a href="https://www.intel.com" target="_blank">Official Site</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>World Leader in Computing Innovation</h1>
+        <p>Pioneering semiconductor manufacturing and technology solutions since 1968</p>
+        <div class="status-badge">
+            <i class="fas fa-check-circle"></i> Website Status: LIVE & MONITORED
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
         <div class="dashboard">
             <div class="card">
-                <h3><i class="fas fa-rocket"></i> Deployment</h3>
-                <p><strong>Project:</strong> web-projects-486505</p>
+                <h3><i class="fas fa-rocket"></i> Deployment Status</h3>
+                <p><strong>Project ID:</strong> web-projects-486505</p>
                 <p><strong>Last Updated:</strong> <span id="timestamp">Loading...</span></p>
-                <p><strong>Status:</strong> <span style="color: #4CAF50;">● Active</span></p>
+                <p><strong>Hosting:</strong> Firebase Hosting (Google Cloud)</p>
+                <p><strong>CI/CD:</strong> GitHub Actions</p>
             </div>
             
             <div class="card">
-                <h3><i class="fas fa-cogs"></i> Technology</h3>
+                <h3><i class="fas fa-cogs"></i> Technology Stack</h3>
                 <div class="tech-stack">
                     <span class="tech-tag">Firebase Hosting</span>
                     <span class="tech-tag">GitHub Actions</span>
-                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">HTML5 & CSS3</span>
+                    <span class="tech-tag">JavaScript ES6+</span>
                     <span class="tech-tag">Global CDN</span>
-                    <span class="tech-tag">CI/CD</span>
+                    <span class="tech-tag">Auto SSL/TLS</span>
                 </div>
             </div>
+            
+            <div class="card">
+                <h3><i class="fas fa-chart-line"></i> Performance</h3>
+                <p>✅ Global Content Delivery Network</p>
+                <p>✅ Automatic SSL Certificates</p>
+                <p>✅ Real-time Deployment</p>
+                <p>✅ 99.9% Uptime SLA</p>
+            </div>
         </div>
-        
-        <div class="timestamp">
-            <i class="fas fa-clock"></i> Real-time: <span id="realtime">Loading...</span>
-        </div>
-        
-        <div style="margin-top: 30px; opacity: 0.8;">
-            <p>Automatically deployed via GitHub Actions CI/CD pipeline</p>
-            <p>✅ JavaScript is working correctly!</p>
+
+        <div class="deployment-info">
+            <h3><i class="fas fa-info-circle"></i> Deployment Information</h3>
+            <p>This website is automatically deployed using modern CI/CD practices. Any changes pushed to the GitHub repository trigger an automated build and deployment process.</p>
+            <p><strong>Real-time Status:</strong> <span id="realtime">Loading...</span></p>
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 Intel Corporation. All rights reserved.</p>
+        <p style="margin-top: 1rem; opacity: 0.8;">
+            This demonstration site showcases enterprise-grade web deployment infrastructure.
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
     <script>
-        // Update both timestamps
+        // Update timestamps
         function updateTimestamps() {
             const now = new Date();
             
-            // Format 1: Full date/time
+            // Full date/time
             const fullDate = now.toLocaleString('en-US', {
                 weekday: 'long',
                 year: 'numeric',
@@ -143,10 +263,11 @@
                 day: 'numeric',
                 hour: '2-digit',
                 minute: '2-digit',
-                second: '2-digit'
+                second: '2-digit',
+                timeZoneName: 'short'
             });
             
-            // Format 2: Real-time updating
+            // Real-time updating
             const timeOnly = now.toLocaleTimeString('en-US', {
                 hour: '2-digit',
                 minute: '2-digit',
@@ -158,20 +279,16 @@
             document.getElementById('timestamp').textContent = fullDate;
             document.getElementById('realtime').textContent = timeOnly;
             
-            // Log to console
-            console.log(`Intel site updated at: ${timeOnly}`);
+            // Console log
+            console.log(`Intel site updated: ${timeOnly}`);
         }
         
-        // Run on load
-        updateTimestamps();
-        
-        // Update every second
-        setInterval(updateTimestamps, 1000);
-        
-        // Initial console message
-        console.log('🚀 Intel Corporation website loaded successfully!');
-        console.log('✅ JavaScript is executing correctly');
-        console.log('🌐 URL: ' + window.location.href);
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Intel Corporation website loaded successfully!');
+            updateTimestamps();
+            setInterval(updateTimestamps, 1000);
+        });
     </script>
 </body>
 </html>

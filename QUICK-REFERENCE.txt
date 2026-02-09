@@ -1,0 +1,35 @@
+﻿=== INTEL WEBSITE QUICK REFERENCE ===
+
+LIVE URLS:
+• Main Site: https://web-projects-486505.web.app
+• About Page: https://web-projects-486505.web.app/about/
+• Diagnostic: https://web-projects-486505.web.app/diagnostic.html
+
+MANAGEMENT:
+• Firebase Console: https://console.firebase.google.com/project/web-projects-486505/overview
+• GitHub Actions: https://github.com/anal87/intel-website/actions
+• GitHub Repo: https://github.com/anal87/intel-website
+
+DEPLOYMENT COMMANDS:
+1. Quick deploy: firebase deploy --only hosting
+2. Using script: .\deploy.ps1
+3. Using Git: 
+   git add .
+   git commit -m "Your message"
+   git push
+
+PROJECT LOCATION:
+E:\Users\Samar\Documents\GitProjects\web-projects\intel-website\intel-website\
+
+TESTING:
+1. Open site in Incognito mode (Ctrl+Shift+N)
+2. Press F12 for Developer Tools
+3. Check Console for JavaScript logs
+4. Verify timestamp updates every second
+
+TROUBLESHOOTING:
+• If site shows old content: Press Ctrl+F5 (hard refresh)
+• If JavaScript not working: Check browser console (F12)
+• If deployment fails: Check GitHub Actions status
+
+Last updated: $(Get-Date)
