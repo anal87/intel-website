@@ -1,14 +1,14 @@
-ï»¿=== INTEL WEBSITE QUICK REFERENCE ===
+=== INTEL WEBSITE QUICK REFERENCE ===
 
 LIVE URLS:
-â€¢ Main Site: https://web-projects-486505.web.app
-â€¢ About Page: https://web-projects-486505.web.app/about/
-â€¢ Diagnostic: https://web-projects-486505.web.app/diagnostic.html
+• Main Site: https://web-projects-486505.web.app
+• About Page: https://web-projects-486505.web.app/about/
+• Diagnostic: https://web-projects-486505.web.app/diagnostic.html
 
 MANAGEMENT:
-â€¢ Firebase Console: https://console.firebase.google.com/project/web-projects-486505/overview
-â€¢ GitHub Actions: https://github.com/anal87/intel-website/actions
-â€¢ GitHub Repo: https://github.com/anal87/intel-website
+• Firebase Console: https://console.firebase.google.com/project/web-projects-486505/overview
+• GitHub Actions: https://github.com/samacayyed/intel-website/actions
+• GitHub Repo: https://github.com/samacayyed/intel-website
 
 DEPLOYMENT COMMANDS:
 1. Quick deploy: firebase deploy --only hosting
@@ -28,8 +28,9 @@ TESTING:
 4. Verify timestamp updates every second
 
 TROUBLESHOOTING:
-â€¢ If site shows old content: Press Ctrl+F5 (hard refresh)
-â€¢ If JavaScript not working: Check browser console (F12)
-â€¢ If deployment fails: Check GitHub Actions status
+• If site shows old content: Press Ctrl+F5 (hard refresh)
+• If JavaScript not working: Check browser console (F12)
+• If deployment fails: Check GitHub Actions status
 
 Last updated: $(Get-Date)
+

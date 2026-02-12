@@ -1,0 +1,1 @@
+import React from "react"; const TermsPage = () => (<div style={{padding:"3rem",maxWidth:"800px",margin:"0 auto",background:"white",borderRadius:"10px",boxShadow:"0 5px 15px rgba(0,0,0,0.1)"}}><h1>Terms of Service</h1><p>AdSense Publisher: ca-pub-3069979983539131</p><p>Contact: Samarhussainsyed@hotmail.com</p></div>);}; export default TermsPage;

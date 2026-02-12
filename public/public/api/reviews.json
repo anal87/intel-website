@@ -1,0 +1,12 @@
+﻿{
+  "reviews": [
+    {
+      "id": 1,
+      "product": "Intel Core i9-13900K",
+      "rating": 4.8,
+      "summary": "Best gaming CPU on the market",
+      "affiliate_link": "https://amzn.to/link",
+      "tags": ["gaming", "performance", "high-end"]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+import React from "react"; const PrivacyPage = () => (<div style={{padding:"3rem",maxWidth:"800px",margin:"0 auto",background:"white",borderRadius:"10px",boxShadow:"0 5px 15px rgba(0,0,0,0.1)"}}><h1>Privacy Policy</h1><p>This site uses Google AdSense (ca-pub-3069979983539131)...</p></div>);}; export default PrivacyPage;

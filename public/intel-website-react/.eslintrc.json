@@ -1,0 +1,9 @@
+﻿{
+  "extends": ["react-app"],
+  "rules": {
+    "no-undef": "off"
+  },
+  "globals": {
+    "adsbygoogle": "readonly"
+  }
+}

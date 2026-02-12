@@ -1,0 +1,48 @@
+﻿=== ADSENSE VERIFICATION CHECKLIST ===
+
+STEP 1: GET VERIFICATION CODE
+1. Go to: https://www.google.com/adsense
+2. Click "Sites" in left menu
+3. Click "Add site"
+4. Enter: web-projects-486505.web.app
+5. Choose "HTML tag" verification method
+6. Copy the meta tag code
+
+STEP 2: UPDATE YOUR SITE
+1. Open: public\index.html
+2. Find the comment: <!-- TODO: Add this meta tag from AdSense -->
+3. Replace with the actual meta tag from AdSense
+4. Save the file
+
+STEP 3: DEPLOY
+1. Run: firebase deploy --only hosting
+2. Wait 5 minutes for deployment
+
+STEP 4: VERIFY IN ADSENSE
+1. Go back to AdSense
+2. Click "Verify" next to your site
+3. Wait 24-48 hours for approval
+
+STEP 5: TROUBLESHOOTING
+If verification fails:
+• Ensure meta tag is in <head> section
+• Clear browser cache
+• Try incognito mode
+• Wait 24 hours and try again
+• Contact AdSense support
+
+=== REQUIRED FOR APPROVAL ===
+1. ✅ Site is live
+2. ✅ Original content
+3. ✅ Privacy policy page
+4. ✅ Contact information
+5. ✅ Good navigation
+6. ✅ No broken links
+7. ✅ Sufficient content (10+ pages recommended)
+
+=== NEXT STEPS AFTER VERIFICATION ===
+1. Add more content pages
+2. Submit sitemap to Google Search Console
+3. Set up Google Analytics
+4. Create more affiliate content
+5. Promote on social media
